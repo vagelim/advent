@@ -1,21 +1,6 @@
-#!/usr/bin/env python
-#Day 2 part 2
-total = 0
+# Advent of Code solutions
+My solutions for this year's [Advent of Code]()
 
-with open('day2.txt', 'r') as f:
-    line = f.read()
-
-lines = line.split('\n')
-lines = lines[:-1] #Strip newline at the end of text
-
-for each in lines:
-    sides = map(int, each.split('x'))
-    smallest = sorted(sides)[:2]
-    perimeter = smallest[0] * 2 + smallest[1] * 2
-
-    volume = sides[0] * sides[1] * sides[2]
-    #l, w, h = map(int, each.split('x'))
-    # Get smallest sides
-    #smallest = sorted(l, w, h)[:2]
-    total += perimeter + volume
-print total
+### Naming Scheme
+Each day there are two puzzles, so dayNa.py is the first puzzle of the N-th day.
+Inputs are labeled as dayN.txt
