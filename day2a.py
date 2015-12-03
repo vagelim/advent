@@ -7,8 +7,7 @@ with open('day2.txt', 'r') as f:
 lines = line.split('\n')
 lines = lines[:-1]
 for each in lines:
-    t = each.split('x')
-    l, w, h = int(t[0]), int(t[1]), int(t[2]) # This is ugly, don't look at it
+    l, w, h = map(int, each.split('x'))
 
     small = min ( (l * w) , (w * h) , (h * l)) # Get smallest surface area
     sa = 2 * l * w + 2 * l * h + 2 * w * h
